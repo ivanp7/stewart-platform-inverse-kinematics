@@ -5,6 +5,7 @@ robot_constants = struct(...
     'legAttachmentDisplacement', [0.015; 0.0055; 0.0425], ... % смещение точки привода, м
     'endEffectorRadius', 0.060, ... % радиус платформы, м
     'sphericalJointDisplacement', [0; 0.0055; 0], ... % смещение точки крепления сферического шарнира, м
+    'jointSPositionAsymmetry', 0.5, ... % асимметрия точек креплений опор к подвижной платформе
     'legRUChainLength', 0.050, ... % длина звена R-U, м
     'legUSChainLength', 0.055 ... % длина звена U-S, м
     );

@@ -65,6 +65,10 @@ R_endEff = robot_constants.endEffectorRadius;
 sphericalJointDisplacement = [R_endEff, 0, 0] + ...
     robot_constants.sphericalJointDisplacement';
 
+asymm = robot_constants.jointSPositionAsymmetry;
+sphericalJointDisplacement = sphericalJointDisplacement + ...
+    [zeros(N, 1), (R_endEff/sqrt(3))*asymm * (-1).^(0:N-1)', zeros(N, 1)];
+
 ang = (0:N-1)' * (2*pi/N);
 leg_CS_orientation_quats = [cos(ang/2), ...
     sin(ang/2) .* repmat([0, 0, 1], N, 1)];
